@@ -17,16 +17,16 @@ export default {
 
       if (db.produtos.length === 0) 
         return interaction.reply({ content: 'Não há produtos para exibir!', ephemeral: true });
-      
+
       const embed = new EmbedBuilder()
         .setTitle('Produtos Disponíveis')
         .setDescription('Selecione um produto para comprar');
-      
+
       const button = new ButtonBuilder()
         .setCustomId('comprarProduto')
         .setLabel('Comprar')
-        .setStyle(ButtonStyle.Success)
-      
+        .setStyle(ButtonStyle.Success);
+
       const selectMenu = new StringSelectMenuBuilder()
         .setCustomId('selecionarProduto')
         .setPlaceholder('Selecione um produto')
